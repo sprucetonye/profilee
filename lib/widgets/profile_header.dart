@@ -58,7 +58,7 @@ class ProfileHeader extends StatelessWidget {
                 ),
                 child: CircleAvatar(
                   radius: 56,
-                  backgroundImage: AssetImage('assets/images/profile.jpg'),
+                  backgroundImage: AssetImage('assets/images/profile_picture.jpeg'),
                   backgroundColor: Colors.grey[300],
                   child: Icon(
                     Icons.person,
@@ -78,7 +78,7 @@ class ProfileHeader extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Your Name',
+                  'Tonye Waribo',
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center,
                 ),

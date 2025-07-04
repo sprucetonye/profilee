@@ -100,7 +100,7 @@ class ContactSection extends StatelessWidget {
   Future<void> _launchEmail() async {
     final Uri emailUri = Uri(
       scheme: 'mailto',
-      path: 'your.email@example.com',
+      path: 'waribosamuel@gmail.com',
       query: 'subject=Hello!',
     );
     if (await canLaunchUrl(emailUri)) {
@@ -109,21 +109,21 @@ class ContactSection extends StatelessWidget {
   }
 
   Future<void> _launchLinkedIn() async {
-    const url = 'https://linkedin.com/in/yourusername';
+    const url = 'https://ng.linkedin.com/in/tonyewaribo';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     }
   }
 
   Future<void> _launchGitHub() async {
-    const url = 'https://github.com/yourusername';
+    const url = 'https://github.com/sprucetonye';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     }
   }
 
   Future<void> _launchTwitter() async {
-    const url = 'https://twitter.com/yourusername';
+    const url = 'https://twitter.com/tonyewaribo';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     }
