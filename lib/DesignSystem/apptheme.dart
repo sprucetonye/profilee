@@ -9,6 +9,12 @@ class Apptheme {
   static const textPrimary = Color(0xFF2D3436);
   static const textSecondary = Color(0xFF636E72);
 
+  // Dark Theme Colors
+  static const Color darkBackgroundColor = Color(0xFF121212);
+  static const Color darkSurfaceColor = Color(0xFF1E1E1E);
+  static const Color darkTextPrimary = Color(0xFFE0E0E0);
+  static const Color darkTextSecondary = Color(0xFFB0B0B0);
+
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
@@ -17,9 +23,9 @@ class Apptheme {
         seedColor: primaryColor,
         brightness: Brightness.light,
         surface: surfaceColor,
-      // ).copyWith(
-      //   background: backgroundColor,
-      // ),
+        // ).copyWith(
+        //   background: backgroundColor,
+        // ),
       ),
       textTheme: const TextTheme(
         headlineLarge: TextStyle(
@@ -37,16 +43,8 @@ class Apptheme {
           fontWeight: FontWeight.w600,
           color: textPrimary,
         ),
-        bodyLarge: TextStyle(
-          fontSize: 16,
-          color: textSecondary,
-          height: 1.5,
-        ),
-bodyMedium: TextStyle(
-  fontSize: 14,
-  color: textSecondary,
-  height: 1.4,
-),
+        bodyLarge: TextStyle(fontSize: 16, color: textSecondary, height: 1.5),
+        bodyMedium: TextStyle(fontSize: 14, color: textSecondary, height: 1.4),
       ),
 
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -56,20 +54,59 @@ bodyMedium: TextStyle(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 24,
-            vertical: 12,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         ),
       ),
       cardTheme: CardThemeData(
         elevation: 4,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         color: surfaceColor,
       ),
-      
+    );
+  }
+
+  static ThemeData get darkTheme {
+    return ThemeData(
+      useMaterial3: true,
+      fontFamily: "Poppins",
+      brightness: Brightness.dark,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: primaryColor,
+        brightness: Brightness.dark,
+        surface: darkSurfaceColor,
+      ).copyWith(background: darkBackgroundColor, onSurface: darkTextPrimary),
+      textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+          color: darkTextPrimary,
+        ),
+        headlineMedium: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.w600,
+          color: darkTextPrimary,
+        ),
+        titleLarge: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+          color: darkTextPrimary,
+        ),
+        bodyLarge: TextStyle(
+          fontSize: 16,
+          color: darkTextSecondary,
+          height: 1.5,
+        ),
+        bodyMedium: TextStyle(
+          fontSize: 14,
+          color: darkTextSecondary,
+          height: 1.4,
+        ),
+      ),
+      cardTheme: CardThemeData(
+        elevation: 4,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        color: darkSurfaceColor,
+      ),
     );
   }
 }

@@ -1,5 +1,5 @@
-# What came to my mind
-## I honestly do have thoughts of how I can possibly create something out of the many ideas that are popping into my head everyday LOL
+## My HNG Stage 0 task,
+# Here I was able to create a simple profile app to introduced myself and point reference to my social media pages, please I would like to gget your honest feedback about my work
 
 ---
 ### Let me walk you through some command lines I did to get to this point

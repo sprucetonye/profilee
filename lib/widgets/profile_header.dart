@@ -48,6 +48,7 @@ class ProfileHeader extends StatelessWidget {
                     color: Colors.white,
                     width: 4,
                   ),
+                
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black26,
@@ -66,16 +67,22 @@ class ProfileHeader extends StatelessWidget {
                     color: Colors.grey[600],
                   ),
                 ),
+                
               ),
+              
             ),
+            
           ),
           
+          
           // Name and Title
+          
           Positioned(
             bottom: 0,
             left: 0,
             right: 0,
             child: Column(
+              
               children: [
                 Text(
                   'Tonye Waribo',

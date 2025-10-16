@@ -7,15 +7,32 @@ void main() {
   runApp(const ProfileApp());
 }
 
-class ProfileApp extends StatelessWidget {
+class ProfileApp extends StatefulWidget {
   const ProfileApp({super.key});
+
+  @override
+  State<ProfileApp> createState() => _ProfileAppState();
+}
+
+class _ProfileAppState extends State<ProfileApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  void _toggleTheme() {
+    setState(() {
+      _themeMode = _themeMode == ThemeMode.light
+          ? ThemeMode.dark
+          : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Profile',
       theme: Apptheme.lightTheme,
-      home: const ProfileScreen(),
+      darkTheme: Apptheme.darkTheme,
+      themeMode: _themeMode,
+      home: ProfileScreen(toggleTheme: _toggleTheme, themeMode: _themeMode),
       debugShowCheckedModeBanner: false,
     );
   }
